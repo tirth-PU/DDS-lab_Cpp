@@ -12,10 +12,12 @@ class LL { public:
     cout << "Get values for new node" << endl;
     cin >> p -> val;
     p -> next = NULL;
+    return p;
   }
 };
 int main() {
   LL b;
   b.start = b.getnode();
   return 0;
+
 }
