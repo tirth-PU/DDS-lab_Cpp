@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int val;
+    struct Node *next;
+};
+
+class LL {
+public:
+    struct Node *start;
+
+    LL() {
+        start = nullptr;
+    }
+
+    struct Node* getnode() {
+        struct Node *p = new Node;
+        cout << "Get values for new node: ";
+        cin >> p->val;
+        p->next = nullptr;
+        return p;
+    }
+
+    void traverse() {
+        struct Node *p = start;
+        cout << "Given linked list is: ";
+        while (p != nullptr) {
+            cout << p->val << "\t";
+            p = p->next;
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    LL b;
+    b.start = b.getnode();
+    b.start->next = b.getnode();
+    b.start->next->next = b.getnode();
+    b.traverse();
+    return 0;
+}
