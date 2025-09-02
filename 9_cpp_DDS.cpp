@@ -1,3 +1,5 @@
+//Selection Sort
+
 #include<iostream>
 using namespace std;
 int A[8] = {9, 3, 7, 1, 5, 6 ,2 ,4};
@@ -26,4 +28,5 @@ int main() {
   cout << "Array - After Selection Sort :)" << endl; 
   show();
   return 0;
+
 }
